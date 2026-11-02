@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-09-11T07:31:02.867Z",
+    "end": "2026-09-11T07:31:03.712Z",
+    "duration": 845,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "07d7d625-0ad7-4af0-b4f4-3d9acd7c94a6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automationExercise.cy.js",
+      "file": "cypress\\e2e\\automationExercise.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6d6f3c05-63c3-4469-a3ed-401493cf395e",
+          "title": "Automation Exercise Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC001 - Register User",
+              "fullTitle": "Automation Exercise Test Cases TC001 - Register User",
+              "timedOut": null,
+              "duration": 420,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\n_methods.default.verifyHomePage();\n_methods.default.clickSignupLogin();\n_methods.default.verifyNewUserSignup();\n_methods.default.enterSignupDetails(testData.registerUser.name, testData.registerUser.email);\n_methods.default.clickSignupButton();\n_methods.default.verifyEnterAccountInformation();\n_methods.default.fillAccountInformation(testData.registerUser.name, testData.registerUser.email, testData.registerUser.password, testData.registerUser.day, testData.registerUser.month, testData.registerUser.year);\n_methods.default.selectNewsletter();\n_methods.default.selectSpecialOffers();\n_methods.default.fillAddressDetails(testData.registerUser.firstName, testData.registerUser.lastName, testData.registerUser.company, testData.registerUser.address, testData.registerUser.address2, testData.registerUser.country, testData.registerUser.state, testData.registerUser.city, testData.registerUser.zipcode, testData.registerUser.mobileNumber);\n_methods.default.clickCreateAccountButton();\n_methods.default.verifyAccountCreated();\n_methods.default.clickContinueButton();\n_methods.default.verifyLoggedInAs();\n_methods.default.clickDeleteAccountButton();\n_methods.default.verifyAccountDeleted();\n_methods.default.clickContinueAfterDelete();",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'name')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at Context.eval (webpack://cypress-framework/./cypress/e2e/automationExercise.cy.js:19:34)\n    at runnable.fn (https://automationexercise.com/__cypress/runner/cypress_runner.js:146772:19)\n    at callFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:166076:21)\n    at Runnable.run (https://automationexercise.com/__cypress/runner/cypress_runner.js:166063:7)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:172161:30)\n    at PassThroughHandlerContext.finallyHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:4045:23)\n    at PassThroughHandlerContext.tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1549:18)",
+                "diff": null
+              },
+              "uuid": "1ab85d83-dcbf-4dfe-96de-8667d250b98a",
+              "parentUUID": "6d6f3c05-63c3-4469-a3ed-401493cf395e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC002 - Login User with correct email and password",
+              "fullTitle": "Automation Exercise Test Cases TC002 - Login User with correct email and password",
+              "timedOut": null,
+              "duration": 274,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\n_methods.default.verifyHomePage();\n_methods.default.clickSignupLogin();\n_methods.default.fillLoginDetails(testData.loginwithvalidcred.email, testData.loginwithvalidcred.password);\n_methods.default.clickLoginButton();\n_methods.default.verifyLoggedInAs();",
+              "err": {
+                "message": "TypeError: _methods.default.fillLoginDetails is not a function",
+                "estack": "TypeError: _methods.default.fillLoginDetails is not a function\n    at Context.eval (webpack://cypress-framework/./cypress/e2e/automationExercise.cy.js:62:20)\n    at runnable.fn (https://automationexercise.com/__cypress/runner/cypress_runner.js:146772:19)\n    at callFn (https://automationexercise.com/__cypress/runner/cypress_runner.js:166076:21)\n    at Runnable.run (https://automationexercise.com/__cypress/runner/cypress_runner.js:166063:7)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:172161:30)\n    at PassThroughHandlerContext.finallyHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:4045:23)\n    at PassThroughHandlerContext.tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1549:18)",
+                "diff": null
+              },
+              "uuid": "95176d9f-f5b4-46a7-9b17-a948e324fcba",
+              "parentUUID": "6d6f3c05-63c3-4469-a3ed-401493cf395e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1ab85d83-dcbf-4dfe-96de-8667d250b98a",
+            "95176d9f-f5b4-46a7-9b17-a948e324fcba"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 694,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

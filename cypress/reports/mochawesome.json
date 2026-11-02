@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-10T10:36:51.526Z",
+    "end": "2026-09-10T10:37:05.349Z",
+    "duration": 13823,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33a3df74-3117-41d1-bd35-ca30732291e4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registerUser.cy.js",
+      "file": "cypress\\e2e\\registerUser.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5b43e6a9-5fa4-4211-b50a-32556f384c76",
+          "title": "Resgister User test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register user successfully",
+              "fullTitle": "Resgister User test Register user successfully",
+              "timedOut": null,
+              "duration": 13791,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const register = new _registerUser.default();\ncy.fixture(\"testData\").then(testData => {\n  cy.visit(\"/\");\n  register.verifyHomePage();\n  register.clickSignupLogin();\n  register.verifyNewUserSignup();\n  register.enterSignupDetails(testData.register.name, testData.register.email);\n  register.clickSignupButton();\n  register.verifyEnterAccountInformation();\n  register.fillAccountInformation(testData.register.name, testData.register.email, testData.register.password, testData.register.day, testData.register.month, testData.register.year);\n  register.selectNewsletter();\n  register.selectSpecialOffers();\n  register.fillAddressDetails(testData.register.firstName, testData.register.lastName, testData.register.company, testData.register.address, testData.register.address2, testData.register.country, testData.register.state, testData.register.city, testData.register.zipcode, testData.register.mobileNumber);\n  register.clickCreateAccountButton();\n  register.verifyAccountCreated();\n  register.clickContinueButton();\n  register.verifyLoggedInAs();\n  register.clickDeleteAccountButton();\n  register.verifyAccountDeleted();\n  register.clickContinueAfterDelete();\n});",
+              "err": {},
+              "uuid": "d221d794-47c1-4c24-be79-bd26ce42f15a",
+              "parentUUID": "5b43e6a9-5fa4-4211-b50a-32556f384c76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d221d794-47c1-4c24-be79-bd26ce42f15a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

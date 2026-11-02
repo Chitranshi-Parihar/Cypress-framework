@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-15T04:59:35.115Z",
+    "end": "2026-09-15T04:59:44.606Z",
+    "duration": 9491,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b46a8aa-d554-49b0-8b5a-185dde25dbcf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automationExercise.cy.js",
+      "file": "cypress\\e2e\\automationExercise.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e05a4041-a341-4574-a3f3-1791d02e1f6f",
+          "title": "Automation Exercise Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC003 - Login User with invalid email and password",
+              "fullTitle": "Automation Exercise Test Cases TC003 - Login User with invalid email and password",
+              "timedOut": null,
+              "duration": 9377,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\n_methods.default.verifyHomePage();\n_methods.default.clickSignupLogin();\n_methods.default.fillLoginDetails(testData.invalidLogin.email, testData.invalidLogin.password);\n_methods.default.clickLoginButton();\n_methods.default.verifyLoginErrorMessage();",
+              "err": {},
+              "uuid": "773ba6fb-63ce-41a4-bdfd-13a02b8217e8",
+              "parentUUID": "e05a4041-a341-4574-a3f3-1791d02e1f6f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "773ba6fb-63ce-41a4-bdfd-13a02b8217e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9377,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

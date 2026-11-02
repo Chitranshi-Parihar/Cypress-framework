@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2026-09-13T05:52:27.138Z",
+    "end": "2026-09-13T05:53:04.556Z",
+    "duration": 37418,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2223bf4b-9dd1-49d4-8b27-9e385a2360ec",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automationExercise.cy.js",
+      "file": "cypress\\e2e\\automationExercise.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "514f910e-d6d6-49e4-9a09-86875cd161be",
+          "title": "Automation Exercise Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC001 - Register User",
+              "fullTitle": "Automation Exercise Test Cases TC001 - Register User",
+              "timedOut": null,
+              "duration": 37269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\n_methods.default.verifyHomePage();\n_methods.default.clickSignupLogin();\n_methods.default.verifyNewUserSignup();\n_methods.default.enterSignupDetails(testData.registerUser.name, testData.registerUser.email);\n_methods.default.clickSignupButton();\n_methods.default.verifyEnterAccountInformation();\n_methods.default.fillAccountInformation(testData.registerUser.name, testData.registerUser.email, testData.registerUser.password, testData.registerUser.day, testData.registerUser.month, testData.registerUser.year);\n_methods.default.selectNewsletter();\n_methods.default.selectSpecialOffers();\n_methods.default.fillAddressDetails(testData.registerUser.firstName, testData.registerUser.lastName, testData.registerUser.company, testData.registerUser.address, testData.registerUser.address2, testData.registerUser.country, testData.registerUser.state, testData.registerUser.city, testData.registerUser.zipcode, testData.registerUser.mobileNumber);\n_methods.default.clickCreateAccountButton();\n_methods.default.verifyAccountCreated();\n_methods.default.clickContinueButton();\n_methods.default.verifyLoggedInAs();\n_methods.default.clickDeleteAccountButton();\n_methods.default.verifyAccountDeleted();\n_methods.default.clickContinueAfterDelete();",
+              "err": {},
+              "uuid": "76befe14-02dc-4cb1-9914-ef40e473861f",
+              "parentUUID": "514f910e-d6d6-49e4-9a09-86875cd161be",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC002 - Login User with correct email and password",
+              "fullTitle": "Automation Exercise Test Cases TC002 - Login User with correct email and password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('/');\n_methods.default.verifyHomePage();\n_methods.default.clickSignupLogin();\n_methods.default.fillLoginDetails(testData.loginwithvalidcred.email, testData.loginwithvalidcred.password);\n_methods.default.clickLoginButton();\n_methods.default.verifyLoggedInAs();",
+              "err": {},
+              "uuid": "0cfb5ab3-70e2-4d15-a99c-fadf19440746",
+              "parentUUID": "514f910e-d6d6-49e4-9a09-86875cd161be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "76befe14-02dc-4cb1-9914-ef40e473861f"
+          ],
+          "failures": [],
+          "pending": [
+            "0cfb5ab3-70e2-4d15-a99c-fadf19440746"
+          ],
+          "skipped": [],
+          "duration": 37269,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

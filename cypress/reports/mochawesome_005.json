@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-11T07:31:51.434Z",
+    "end": "2026-09-11T07:32:04.717Z",
+    "duration": 13283,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e896cfac-0223-4f37-a62c-9e368d893e6d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\correctEmailAndPassword.cy.js",
+      "file": "cypress\\e2e\\correctEmailAndPassword.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f6ade16-d6c5-4bb2-a95c-13d3f8365351",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid credentials",
+              "fullTitle": "Login Test Login with valid credentials",
+              "timedOut": null,
+              "duration": 13204,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const loginwithvalidcred = new _CorrectEmailPassword.default();\ncy.fixture(\"testData\").then(testData => {\n  cy.visit(\"/\");\n  loginwithvalidcred.verifyHomePage();\n  loginwithvalidcred.clickSignupLogin();\n  loginwithvalidcred.fillLoginDetails(testData.loginwithvalidcred.email, testData.loginwithvalidcred.password);\n  loginwithvalidcred.clickLoginButton();\n  loginwithvalidcred.verifyLoggedInAs();\n});",
+              "err": {},
+              "uuid": "f84f4e2b-b88f-455d-9c92-9a96887bf58a",
+              "parentUUID": "4f6ade16-d6c5-4bb2-a95c-13d3f8365351",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f84f4e2b-b88f-455d-9c92-9a96887bf58a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13204,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
